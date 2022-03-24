@@ -7,8 +7,7 @@ public class MyFirstProgram {
         int i = 4;
         hello("Hello world!");
 
-        Square s = new Square();
-        s.l = 5;
+        Square s = new Square(5);
         System.out.println(area(s));
 
         Rectangle r = new Rectangle();
