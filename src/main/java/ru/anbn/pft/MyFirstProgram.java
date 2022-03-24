@@ -6,8 +6,15 @@ public class MyFirstProgram {
         System.out.println("Hello world!");
         int i = 4;
         hello("Hello world!");
-        System.out.println(area(5));
-        System.out.println(area(5, 8));
+
+        Square s = new Square();
+        s.l = 5;
+        System.out.println(area(s));
+
+        Rectangle r = new Rectangle();
+        r.a = 3;
+        r.b = 7;
+        System.out.println(area(r));
 
     }
 
@@ -15,12 +22,12 @@ public class MyFirstProgram {
         System.out.println(st);
     }
 
-    private static double area(double len) {
-        return len * len;
+    private static double area(Square s) {
+        return s.l * s.l;
     }
 
-    private static double area(double len, double l) {
-        return len * l;
+    private static double area(Rectangle r) {
+        return r.a + r.b;
     }
 
 }
