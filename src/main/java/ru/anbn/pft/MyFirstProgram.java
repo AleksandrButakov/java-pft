@@ -16,11 +16,11 @@ public class MyFirstProgram {
     }
 
     private static double area(double len) {
-        return len*len;
+        return len * len;
     }
 
     private static double area(double len, double l) {
-        return len*l;
+        return len * l;
     }
 
 }
