@@ -41,10 +41,13 @@ public class MyFirstProgram {
         // проверка корректности координат
         checkingCorrectnessCoordinates(pointB.x, pointB.y);
 
-        // вычислим расстояние между точками
+        // вычислим расстояние между точками в функции класса MyFirstProgram
         distance(pointA, pointB);
 
-
+        // вычислим расстояние между точками в методе класса Point
+        Point p = new Point();
+        System.out.println("Вычисление расстояния в методе:");
+        System.out.println("Расстояние между точками A и B = " + p.distance(pointA, pointB) + "pixels");
     }
 
     // проверим что введенные координаты лежат в диапазоне 800 х 600
@@ -59,49 +62,20 @@ public class MyFirstProgram {
 
     // вычислим расстояние между точками
     public static void distance(Point A, Point B) {
-        System.out.println(A.x);
-        System.out.println(A.y);
-        System.out.println(B.x);
-        System.out.println(B.y);
-
-
+        // переменные для расчета сторон треугольника
+        int a, b;
+        double c;
+        a = Math.abs(A.x - B.x);
+        b = Math.abs(A.y - B.y);
+        c = Math.sqrt(a * a + b * b);
+        System.out.println("Вычисление расстояния в функции:");
+        System.out.println("Расстояние между точками A и B = " + String.format("%.2f", c) + "pixels");
     }
-
 
     // введены некорректные данные, завершение выполнения программы
     static void completionProgram() {
         System.out.println("Введены некорректные данные, запустите программу заново :-(");
         System.exit(0);
     }
-
-
-        /*
-        System.out.println("Hello world!");
-        int i = 4;
-        hello("Hello world!");
-
-        Square s = new Square(5);
-        System.out.println(area(s));
-
-        Rectangle r = new Rectangle();
-        r.a = 3;
-        r.b = 7;
-        System.out.println(area(r));
-
-    }
-
-    private static void hello(String st) {
-        System.out.println(st);
-    }
-
-    private static double area(Square s) {
-        return s.l * s.l;
-    }
-
-    private static double area(Rectangle r) {
-        return r.a + r.b;
-    }
- */
-
 
 }
